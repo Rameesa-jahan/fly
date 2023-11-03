@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+
+:root {
+  --primary-color: hsl(225, 50%, 48%);
+  --secondary-color: hsl(180, 17%, 95%);
+  --colorOne: hsl(15, 74%, 70%);
+  --colorTwo: hsl(28, 100%, 82%);
+  --hover-color: hsl(225, 56%, 59%);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 12%);
+  --text-color: hsl(240, 1%, 48%);
+  --border-color: hsl(0, 0%, 83%);
+  --white-color-dim: hsl(0, 0%, 93%);
+  --gray-bg: hsl(0, 0%, 96%);
+  --gray-text: rgb(145, 145, 145);
+  --input-color: hsl(330, 12%, 97%);
+  --box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --transition: 0.4s ease-in-out;
+}
+
+body {
+  background: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon, .button {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.none {
+  display: none;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  color: var(--white-color);
+}
+
+.btn a {
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--hover-color);
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+  color: var(--gray-text);
+}
+
+p {
+  font-size: 13px;
+  color: var(--gray-text);
+  line-height: 22px;
+}
+
+h4 {
+  padding: 1rem 1rem 0;
+  font-weight: 700;
+  color: var(--black-color);
+}
+
+h2 {
+  font-size: 25px;
+  padding: 1rem 0;
+  color: var(--black-color);
+}
+
+.navBar {
+  position: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navBar .navBarOne, .navBar .navBarTwo {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+}
+
+.navBar .navBarOne {
+  background-color: var(--secondary-color);
+}
+
+.navBar .navBarOne .icon:hover {
+  color: var(--primary-color);
+}
+
+.navBar .navBarOne .atb {
+  gap: 1rem;
+}
+
+.navBar .navBarOne .atb span {
+  color: var(--black-color);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.navBar .navBarOne .atb span:hover {
+  color: var(--primary-color);
+  font-size: 700;
+}
+
+.navBar .navBarTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 3rem;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.navBar .navBarTwo .logoDiv .logo {
+  width: 20%;
+}
+
+@media screen and (max-width: 768px) {
+  .navBar .navBarTwo .navBarMenu {
+    position: absolute;
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    top: 5rem;
+    right: -50%;
+    width: 80%;
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+    z-index: 2000;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.5) 0px 4px 6px -2px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.5) 0px 4px 6px -2px;
+    border: 3px solid var(--white-color);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+  }
+  .navBar .navBarTwo .navBarMenu .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: -5rem;
+    text-align: center;
+  }
+  .navBar .navBarTwo .navBarMenu .menu .listItem {
+    padding: .5rem o;
+    cursor: pointer;
+    color: var(--black-color);
+  }
+  .navBar .navBarTwo .navBarMenu .menu .listItem:hover {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .navBarMenu .btnOne {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  .navBar .navBarTwo .btnTwo {
+    display: none;
+  }
+}
+
+.navBar .navBarTwo .toggleIcon .icon {
+  font-size: 30px;
+  color: var(--black-color);
+}
+/*# sourceMappingURL=main.css.map */
